@@ -1,5 +1,5 @@
 // Import values as string
-import {valuesList} from './values.js';
+import { valuesList } from './values.js';
 
 // Parse values string
 //console.log(valuesList);
