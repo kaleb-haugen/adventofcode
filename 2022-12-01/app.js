@@ -1,12 +1,9 @@
 // Import values as string
-import { valuesList } from './values.js';
-
-// Parse values string
+import { valuesString } from './values.js';
 //console.log(valuesList);
 
 // Split the string into an array
-let valuesArray = valuesList.split(`\n\n`);
-
+let valuesArray = valuesString.split(`\n\n`);
 //console.log(valuesArray);
 
 // Split the objects into arrays, convert to numbers, and sum each array
@@ -15,9 +12,7 @@ valuesArray.forEach(function (arrayObject) {
     .split(`\n`)
     .map(Number)
     .reduce((a, b) => a + b);
-  console.log(arrayObject);
+  //console.log(arrayObject);
 });
-
-//valuesArray.sort(function(a, b){return a - b});
 
 console.log(valuesArray);

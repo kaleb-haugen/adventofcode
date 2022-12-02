@@ -1,4 +1,4 @@
-export let valuesList = `9195
+export let valuesString = `9195
 5496
 2732
 8364
