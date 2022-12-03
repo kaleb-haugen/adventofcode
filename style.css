@@ -1,3 +1,7 @@
+body{
+    background: #222;
+    font-color: #fafafa;
+}
 li {
     display: none;
 }
