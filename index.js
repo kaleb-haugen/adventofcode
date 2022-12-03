@@ -1,14 +1,14 @@
-// Import stylesheet
-//import 
-
 // Import applications
-const day1 = require('./2022-12-01/app.js');
+//require('./2022-12-01/app.js');
+import {} from './2022-12-02/app.js';
 
-// Write Javascript code!
-const result1 = document.getElementById('d1');
-result1.className = `visible`;
-result1.innerHTML = `Day 1 Results:
-                  <ul>
-                    <li>69281</li>
-                    <li>201524</li>
-                  </ul>`;
+// Return puzzle results
+let puzzle1 = document.getElementById('d1');
+
+puzzle1.className = `visible`;
+puzzle1.innerHTML = `Day 1 Results:
+                    <ul>
+                      <li class="visible">69281</li>
+                      <li class="visible">201524</li>
+                    </ul>`;
+

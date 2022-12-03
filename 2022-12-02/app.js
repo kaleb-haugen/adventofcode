@@ -12,5 +12,5 @@ valuesArray.forEach(function (arrayObject) {
     .split(`\n`)
     .map(Number)
     .reduce((a, b) => a + b);
-  //console.log(arrayObject);
+  console.log(arrayObject);
 });
