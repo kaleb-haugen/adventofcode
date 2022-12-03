@@ -1,6 +1,6 @@
 // Import applications
 //require('./2022-12-01/app.js');
-import {} from './2022-12-02/app.js';
+import { } from './2022-12-02/app.js';
 
 // Return puzzle results
 let puzzle1 = document.getElementById('d1');
