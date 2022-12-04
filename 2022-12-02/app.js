@@ -2500,12 +2500,12 @@ A X
 B X
 C X`;
 
-valuesString = valuesString.replace("A", "1")
-                           .replace("B", "2")
-                           .replace("C", "3")
-                           .replace("X", "1")
-                           .replace("Y", "2")
-                           .replace("Z", "3");
+valuesString = valuesString.replace(/A/g, "1")
+  .replace(/B/g, "2")
+  .replace(/C/g, "3")
+  .replace(/X/g, "1")
+  .replace(/Y/g, "2")
+  .replace(/Z/g, "3");
 
 // Split the string into an array
 let valuesArray = valuesString.split(`\n`);
@@ -2545,5 +2545,5 @@ function battleLoop() {
   return battleOutcome
 }
 
-let x = battleLoop()
-console.log(x)
+let results = battleLoop()
+document.getElementById(`results`).innerHTML += `<p class="return prompt">` + results + `</p>`;

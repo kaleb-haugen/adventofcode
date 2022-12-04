@@ -1,11 +1,41 @@
-body{
-    background: #222;
-    font-color: #fafafa;
-}
-li {
-    display: none;
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_SuW-AJi8SJQtQ4Y.woff) format('woff');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-.visible {
-    display: block;
+body {
+    background: #222;
+    color: #fafafa;
+    font-family: 'Roboto Mono';
+    font-size: 11px;
+    font-weight: 400;
+    min-width: 600px;
+    overflow: hidden;
+}
+
+iframe {
+    border: none;
+    background: #999;
+    width: 400px;
+    height: 400px;
+}
+
+.prompt {
+    font-weight: 200;
+}
+
+.return {
+    margin-left: 40px;
+}
+
+a {
+    color: #fafafa
+}
+
+a:hover {
+    font-weight: 700;
+
 }

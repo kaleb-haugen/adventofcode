@@ -2286,10 +2286,9 @@ valuesArray = valuesArray.map(
 ).sort(sortNumerically).reverse();
 
 // Select desired values from the array
-let top1 = valuesArray[0];
-let top3 = valuesArray.slice(0, 3).reduce(function (accumVariable, curValue) {
+let results1 = valuesArray[0];
+let results2 = valuesArray.slice(0, 3).reduce(function (accumVariable, curValue) {
   return accumVariable + curValue
 }, 0);
 
-console.log(top1);
-console.log(top3);
+document.getElementById(`results`).innerHTML += `<p class="return prompt">` + results1 + `</br>` + results2 + `</p>`;
