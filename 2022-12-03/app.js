@@ -88,5 +88,6 @@ resultsArray.forEach(n => {
   mapSum += mapValues
 });
 
-
-document.getElementById(`results`).innerHTML += `<p class="return prompt">` + mapSum + `</br>` + `mapSum2` + `</p>`;
+let results = mapSum
+let results1 = null
+document.getElementById(`results`).innerHTML += `<p class="return prompt">` + results + `</br>` + results1 + `</p>`;

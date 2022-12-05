@@ -1,51 +1,59 @@
 // Import values as string
 let valuesString = document.getElementById(`inputs`).textContent.replace(/  /gm, ``);
 
-
-valuesString = valuesString.replace(/A/g, "1")
-  .replace(/B/g, "2")
-  .replace(/C/g, "3")
-  .replace(/X/g, "1")
-  .replace(/Y/g, "2")
-  .replace(/Z/g, "3");
-
 // Split the string into an array
 let valuesArray = valuesString.split(`\n`);
 
-// Split array into separate arrays
-let attackArray = valuesArray.map(arrayObject => arrayObject.substring(0, 1));
-let defendArray = valuesArray.map(arrayObject => arrayObject.substring(2, 3));
-
-function battleLoop() {
-  let fightOutcome = 0
-  let battleOutcome = 0
-
-  // Comparing each element of array
-  for (var i = 0; i < 2500; i++) {
-
-    // Battle scoring
-    if (attackArray[i] === defendArray[i]) {
-      fightOutcome = parseInt(defendArray[i]) + 3;
-      // console.log([`Tie`,fightOutcome,attackArray[i],defendArray[i]]);
-
-    } else if ((attackArray[i] === '3') && (defendArray[i] === '1')) {
-      fightOutcome = parseInt(defendArray[i]) + 6;
-      // console.log([`Win:Underdog`,fightOutcome,attackArray[i],defendArray[i]]);
-
-    } else if (attackArray[i] < defendArray[i]) {
-      fightOutcome = parseInt(defendArray[i]) + 6;
-      // console.log([`Win`,fightOutcome,attackArray[i],defendArray[i]]);
-
-    } else {
-      fightOutcome = parseInt(defendArray[i]) + 0;
-      // console.log([`Loss`,fightOutcome,attackArray[i],defendArray[i]]);
-
-    };
-    battleOutcome = battleOutcome + fightOutcome
-    // console.log([battleOutcome,fight]);
+// Score the battles
+let arraySum = 0
+valuesArray.forEach(n => {
+  switch (n) {
+    case `A X`: arraySum += (3 + 1);
+      break;
+    case `A Y`: arraySum += (6 + 2);
+      break;
+    case `A Z`: arraySum += (0 + 3);
+      break;
+    case `B X`: arraySum += (0 + 1);
+      break;
+    case `B Y`: arraySum += (3 + 2);
+      break;
+    case `B Z`: arraySum += (6 + 3);
+      break;
+    case `C X`: arraySum += (6 + 1);
+      break;
+    case `C Y`: arraySum += (0 + 2);
+      break;
+    case `C Z`: arraySum += (3 + 3);
+      break;
   }
-  return battleOutcome
-}
+})
 
-let results = battleLoop()
-document.getElementById(`results`).innerHTML += `<p class="return prompt">` + results + `</p>`;
+// Score the battles
+let arraySum1 = 0
+valuesArray.forEach(n => {
+  switch (n) {
+    case `A X`: arraySum1 += (0 + 3);
+      break;
+    case `A Y`: arraySum1 += (3 + 1);
+      break;
+    case `A Z`: arraySum1 += (6 + 2);
+      break;
+    case `B X`: arraySum1 += (0 + 1);
+      break;
+    case `B Y`: arraySum1 += (3 + 2);
+      break;
+    case `B Z`: arraySum1 += (6 + 3);
+      break;
+    case `C X`: arraySum1 += (0 + 2);
+      break;
+    case `C Y`: arraySum1 += (3 + 3);
+      break;
+    case `C Z`: arraySum1 += (6 + 1);
+      break;
+  }
+})
+
+let results = arraySum
+let results1 = arraySum1
+document.getElementById(`results`).innerHTML += `<p class="return prompt">` + results + `</br>` + results1 + `</p>`;
