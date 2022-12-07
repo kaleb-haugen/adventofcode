@@ -1,0 +1,14 @@
+### Advent of Code ###
+# Ignore node_modules
+node_modules/*
+
+# Icnore regular config files
+package-log.json
+package.json
+.hintrc
+tsconfig.json
+
+# Whitelist exceptions using ! negation
+# !example.log
+
+# Fin
